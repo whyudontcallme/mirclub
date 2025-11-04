@@ -1,4 +1,4 @@
-<!doctype html><html lang="ru"><head><title>MIRCLUB — буст</title>
+<!doctype html><html lang="ru"><head><title>MIRCLUB</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="./assets/favicon.png" />
@@ -17,11 +17,11 @@
 </head><body class="page" data-theme="default">
 <div class="bg fx-1"></div><div class="bg fx-2"></div><div class="bg fx-3"></div>
   <header class="header container">
-    <a class="brand" href="./index.html"><img src="./assets/logo.svg" alt="MIRCLUB" /></a>
+    <a class="brand" href="./index.html"><img src="./assets/logo.svg" alt="MIRCLUB" loading="lazy" decoding="async" /></a>
     <nav class="nav">
       <a href="./index.html#services">Услуги</a>
       <a href="./pages/about.html">О нас</a>
-      <a href="./pages/reviews.html">Отзывы</a>
+      <a href="#reviews">Отзывы</a>
       <a href="./cabinet/index.html">Личный кабинет</a>
       <div class="theme-toggle" id="themeToggle" role="tablist" aria-label="Theme toggle">
         
@@ -35,7 +35,7 @@
   <nav class="mnav" id="mnav">
     <a href="./index.html#services">Услуги</a>
     <a href="./pages/about.html">О нас</a>
-    <a href="./pages/reviews.html">Отзывы</a>
+    <a href="#reviews">Отзывы</a>
     <a href="./cabinet/index.html">Личный кабинет</a>
     <div class="theme-toggle mt8" id="themeToggleM">
       <button data-theme="light">Светлая</button>
@@ -43,20 +43,164 @@
       <button data-theme="dark">Тёмная</button>
     </div>
   </nav><section class="hero container">
-<div class="hero__left"><h1>ЗАКАЗЫВАЙ БУСТ <span class="accent">СЕЙЧАС</span><br>И ЭКОНОМЬ ДО <span class="accent">30%</span></h1><p class="muted">Прозрачный и профессиональный бустинг рейтинга от PRO-геймеров. Надежно и безопасно.</p><div class="hero__cta"><a class="btn btn--lg ripple" href="./pages/contacts.html">Заказать</a><a class="btn btn--ghost ripple" href="./pages/reviews.html">Отзывы</a></div></div><div class="hero__right"><img class="hero__img" src="./assets/hero-figure.png"></div></section>
+<div class="hero__left"><h1>ЗАКАЗЫВАЙ БУСТ <span class="accent">СЕЙЧАС</span><br>И ЭКОНОМЬ ДО <span class="accent">30%</span></h1><p class="muted">Прозрачный и профессиональный бустинг рейтинга от PRO-геймеров. Надежно и безопасно.</p><div class="hero__cta"><a class="btn btn--lg ripple" href="./pages/contacts.html">Заказать</a><a class="btn btn--ghost ripple" href="./pages/reviews.html">Отзывы</a></div></div><div class="hero__right"><img class="hero__img" src="./assets/hero-figure.png" loading="eager" fetchpriority="high" decoding="async" alt="hero" /></div></section>
 <section class="banner-ticker">
   <div class="ticker-track" id="tickerTrack">
-    <a class="tile" href="./games/dota2.html"><img src="./assets/brand-dota.svg"><span>Dota 2 — буст рейтинга</span></a>
-    <a class="tile" href="./games/valorant.html"><img src="./assets/brand-valorant.svg"><span>Valorant — ранги</span></a>
-    <a class="tile" href="./games/cs2.html"><img src="./assets/brand-cs2.svg"><span>CS2 — победы</span></a>
-    <a class="tile" href="./games/overwatch2.html"><img src="./assets/brand-overwatch2.svg"><span>Overwatch 2 — услуги</span></a>
-    <a class="tile" href="./games/dota2.html"><img src="./assets/brand-dota.svg"><span>Dota 2 — буст рейтинга</span></a>
-    <a class="tile" href="./games/valorant.html"><img src="./assets/brand-valorant.svg"><span>Valorant — ранги</span></a>
-    <a class="tile" href="./games/cs2.html"><img src="./assets/brand-cs2.svg"><span>CS2 — победы</span></a>
-    <a class="tile" href="./games/overwatch2.html"><img src="./assets/brand-overwatch2.svg"><span>Overwatch 2 — услуги</span></a>
+  <a class="tile" href="./games/dota2.html"><img src="./assets/brand-dota.svg" alt="dota" loading="lazy" decoding="async"><span>Dota 2 — буст рейтинга</span></a>
+  <a class="tile" href="./games/valorant.html"><img src="./assets/brand-valorant.svg" alt="valorant" loading="lazy" decoding="async"><span>Valorant — ранги</span></a>
+  <a class="tile" href="./games/cs2.html"><img src="./assets/brand-cs2.svg" alt="cs2" loading="lazy" decoding="async"><span>CS2 — победы</span></a>
+  <a class="tile" href="./games/overwatch2.html"><img src="./assets/brand-overwatch2.svg" alt="overwatch" loading="lazy" decoding="async"><span>Overwatch 2 — услуги</span></a>
+  <a class="tile" href="./games/dota2.html"><img src="./assets/brand-dota.svg" alt="dota" loading="lazy" decoding="async"><span>Dota 2 — буст рейтинга</span></a>
+  <a class="tile" href="./games/valorant.html"><img src="./assets/brand-valorant.svg" alt="valorant" loading="lazy" decoding="async"><span>Valorant — ранги</span></a>
+  <a class="tile" href="./games/cs2.html"><img src="./assets/brand-cs2.svg" alt="cs2" loading="lazy" decoding="async"><span>CS2 — победы</span></a>
+  <a class="tile" href="./games/overwatch2.html"><img src="./assets/brand-overwatch2.svg" alt="overwatch" loading="lazy" decoding="async"><span>Overwatch 2 — услуги</span></a>
   </div>
-</section><section class="services container" id="services"><h2 class="title">УСЛУГИ ПО ИГРАМ</h2><div class="slider" data-autoplay="true" data-interval="2800"><button class="s-btn" id="prev">‹</button><div class="track" id="track"><a class="card glow" href="./games/valorant.html"><img src="./assets/avatars/valorant.png"><div class="card__body"><h3>VALORANT</h3><span class="btn btn--sm">Выбрать</span></div></a><a class="card glow" href="./games/dota2.html"><img src="./assets/avatars/dota2.png"><div class="card__body"><h3>DOTA 2</h3><span class="btn btn--sm">Выбрать</span></div></a><a class="card glow" href="./games/cs2.html"><img src="./assets/avatars/cs2.png"><div class="card__body"><h3>COUNTER STRIKE 2</h3><span class="btn btn--sm">Выбрать</span></div></a><a class="card glow" href="./games/overwatch2.html"><img src="./assets/avatars/overwatch2.png"><div class="card__body"><h3>OVERWATCH 2</h3><span class="btn btn--sm">Выбрать</span></div></a></div><button class="s-btn" id="next">›</button></div></section>
+</section><section class="services container" id="services"><h2 class="title">УСЛУГИ ПО ИГРАМ</h2><div class="slider" data-autoplay="true" data-interval="7000"><button class="s-btn" id="prev">‹</button><div class="track" id="track"><a class="card glow" href="./games/valorant.html"><img src="./assets/avatars/valorant.png"><div class="card__body"><h3>VALORANT</h3><span class="btn btn--sm">Выбрать</span></div></a><a class="card glow" href="./games/dota2.html"><img src="./assets/avatars/dota2.png"><div class="card__body"><h3>DOTA 2</h3><span class="btn btn--sm">Выбрать</span></div></a><a class="card glow" href="./games/cs2.html"><img src="./assets/avatars/cs2.png"><div class="card__body"><h3>COUNTER STRIKE 2</h3><span class="btn btn--sm">Выбрать</span></div></a><a class="card glow" href="./games/overwatch2.html"><img src="./assets/avatars/overwatch2.png"><div class="card__body"><h3>OVERWATCH 2</h3><span class="btn btn--sm">Выбрать</span></div></a></div><button class="s-btn" id="next">›</button></div></section>
+<!-- ПОЧЕМУ MIRCLUB? -->
+<section id="why" class="why-mirclub">
+  <div class="container why__inner">
+    <h2 class="why__title">ПОЧЕМУ MIRCLUB?</h2>
+    <p class="why__subtitle">
+      Прозрачный и профессиональный бустинг рейтинга от PRO-геймеров. Надежно и безопасно.
+    </p>
+
+    <ul class="why__stats">
+      <li class="why__stat">
+        <span class="why__num">5 ЛЕТ</span>
+        <span class="why__cap">НА РЫНКЕ</span>
+      </li>
+      <li class="why__stat">
+        <span class="why__num">3 678</span>
+        <span class="why__cap">ЗАКАЗОВ<br>ВЫПОЛНЕНО</span> 
+      </li>
+      <li class="why__stat">
+        <span class="why__num">92%</span>
+        <span class="why__cap">ВИНРЕЙТ</span>
+      </li>
+      <li class="why__stat">
+        <span class="why__num">147</span>
+        <span class="why__cap">ПРО-<br>ГЕЙМЕРОВ</span>
+      </li>
+    </ul>
+
+    <ul class="why__tiles">
+      <li class="tile">
+        <h3 class="tile__title">СИСТЕМА БЕЗОПАСНОЙ СДЕЛКИ<br><b>“РОБОКАССА”</b></h3>
+        <p class="tile__text">Покупая у нас, вы получаете гарантию выполнения своего заказа.</p>
+      </li>
+
+      <li class="tile">
+        <h3 class="tile__title">HTTPS<br>ШИФРОВАНИЕ ДАННЫХ</h3>
+        <p class="tile__text">Мошенники не смогут получить доступ к паролям и картам пользователей.</p>
+      </li>
+
+      <li class="tile">
+        <h3 class="tile__title">КУПИТЬ ЛЕГКО С<br><b>“MIRCOIN”</b></h3>
+        <p class="tile__text">Выполняй задания, зарабатывай валюту сайта, оплачивай покупки.</p>
+      </li>
+
+      <li class="tile">
+        <h3 class="tile__title">ВЕЧНЫЕ СКИДКИ С<br><b>“MIRLOYALTY”</b></h3>
+        <p class="tile__text">Своя система лояльности для постоянных покупателей. Зависят от покупок.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
 <section class="promo container"><div class="promo__inner glass"><div><h3><span class="accent">ЗАРЕГИСТРИРУЙСЯ</span><br>И ПОЛУЧИ MIRCOIN’ОВ ×100</h3><p class="muted">Выполняй задания и оплати ими до 50% покупки.</p><a class="btn ripple" href="./pages/contacts.html">Забрать всё</a></div><img class="promo__img" src="./assets/promo-badge.png"></div></section>
+  
+  <!-- ОТЗЫВЫ НАШИХ КЛИЕНТОВ -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <h2 class="reviews__title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+      <p class="reviews__subtitle">Узнайте мнение о нашем сервисе MIRCLUB на различных площадках.</p>
+      <div class="reviews-marquee">
+        <div class="reviews-track" id="reviewsTrack1">
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Fhibu78</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Супер!</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Валюха</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Быстро, качественно, весело. Мне всё понравилось, обращусь ещё!</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Tu888888</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Быстро, качественно, весело. Отвечали на все вопросы, всем советую.</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Jndjulius</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Всё быстро и качественно сделали, ответили на все вопросы, всем советую!</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Артем К.</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Быстро, качественно, весело. Всем советую Мирклаб.</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Леонид Не Гей</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Классно.</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Сергей К.</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Всё быстро и качественно сделали, спасибо!</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Михаил С.</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Супер быстро.</p>
+          </div>
+        </div>
+        <div class="reviews-track reviews-track--reverse" id="reviewsTrack2">
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>ty888888</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Быстро, качественно, весело. Мне всё понравилось, обращусь ещё!</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Леонид Не Гей</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Классно.</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Artem K.</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Все быстро и качественно сделали, отлично на все вопросы отвечали.</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Сергей К.</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Всё быстро и качественно, всем советую!</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Михаил Ф.</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Классно.</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Анастасия И.</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Всё быстро и качественно сделали, всем советую!</p>
+          </div>
+        </div>
+        <div class="reviews-track" id="reviewsTrack3">
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Роман В.</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Заказ выполнили быстро, общение приятное, вернусь ещё.</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Егор S.</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Точно в срок, без лишних вопросов. Рекомендую!</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Илья</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Поддержка ответила мгновенно, всё сделали как просил.</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Маргарита</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Качественно и аккуратно. Цены адекватные, сервис топ.</p>
+          </div>
+          <div class="review glass">
+            <div class="review__head"><span class="avatar"></span><div class="meta"><b>Alex N.</b><span class="stars">★★★★★</span></div></div>
+            <p class="review__text">Ребята молодцы, второй раз беру — всё отлично.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <footer class="footer">
     <div class="container footer__inner">
       <div class="fcol">
@@ -68,4 +212,4 @@
       <div class="fcol"><h5>Оплата</h5><img src="./assets/payments.svg" alt="Payments"/></div>
     </div>
     <div class="container copy">© <span id="year"></span> MIRCLUB</div>
-  </footer><script src="./app.js"></script><script src="./anim.js"></script></body></html>
+  </footer><script src="./app.js"></script></body></html>
