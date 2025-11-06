@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Услуги — MIRCLUB</title>
+  <link rel="icon" href="./assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./anim.css" />
+  <script>
+  (function () {
+    var t = localStorage.getItem('theme3') || 'default';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+  </script>
+</head>
+<body class="page" data-theme="default">
+  <div class="bg fx-1"></div><div class="bg fx-2"></div><div class="bg fx-3"></div>
+  <header class="header container header--glass">
+    <a class="brand" href="./index.html"><img src="./assets/logo.svg" alt="MIRCLUB" loading="lazy" decoding="async" /></a>
+    <nav class="nav">
+      <a href="./services.html" aria-current="page">Услуги</a>
+      <a href="./pages/training.html">Обучение</a>
+      <a href="./pages/accounts.html">Аккаунты</a>
+      <a href="./pages/mirloyalty.html">MIRLOYALTY</a>
+      <a href="./pages/team.html">Наша команда</a>
+      <a href="./index.html#reviews">Отзывы</a>
+      <div class="lang" aria-hidden="true">RU <span class="caret">▾</span></div>
+      <a class="btn btn--ghost" href="#">Войти</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </header>
+
+  <main class="container" style="padding-top:var(--header-height);">
+    <section class="services" style="padding-top:32px;padding-bottom:40px;">
+      <h2 class="title center">УСЛУГИ</h2>
+      <p class="muted center" style="max-width:920px;margin:8px auto 28px;">Выберите игру и платформу, чтобы посмотреть доступные услуги и цены. Все наши услуги выполняют проверенные PRO-геймеры с гарантией.</p>
+
+      <div class="services-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+        <!-- Card 1 -->
+        <div class="glass" style="padding:18px;border-radius:20px;">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <img src="./assets/avatars/valorant.png" alt="Valorant" style="width:120px;height:120px;object-fit:cover;border-radius:16px;" />
+            <div>
+              <h3 style="margin:0 0 6px;">VALORANT</h3>
+              <p class="muted" style="margin:0 0 12px;">Ранги, матчи, агрессивный буст — выбор платформы и режима.</p>
+              <a class="btn" href="./games/valorant.html">Выбрать</a>
+            </div>
+          </div>
+          <!-- social tags removed from card; socials shown in dedicated block below -->
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass" style="padding:18px;border-radius:20px;">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <img src="./assets/avatars/dota2.png" alt="Dota 2" style="width:120px;height:120px;object-fit:cover;border-radius:16px;" />
+            <div>
+              <h3 style="margin:0 0 6px;">DOTA 2</h3>
+              <p class="muted" style="margin:0 0 12px;">Прокачка рейтинга, аккаунты и турниры — безопасно и быстро.</p>
+              <a class="btn" href="./games/dota2.html#ranks">Выбрать</a>
+            </div>
+          </div>
+          <!-- social tags removed from card; socials shown in dedicated block below -->
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass" style="padding:18px;border-radius:20px;">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <img src="./assets/avatars/cs2.png" alt="CS2" style="width:120px;height:120px;object-fit:cover;border-radius:16px;" />
+            <div>
+              <h3 style="margin:0 0 6px;">COUNTER STRIKE 2</h3>
+              <p class="muted" style="margin:0 0 12px;">Матчи, бусты, контрактные игры — гарантия выполнения.</p>
+              <a class="btn" href="./games/cs2.html">Выбрать</a>
+            </div>
+          </div>
+          <!-- social tags removed from card; socials shown in dedicated block below -->
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass" style="padding:18px;border-radius:20px;">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <img src="./assets/avatars/overwatch2.png" alt="Overwatch 2" style="width:120px;height:120px;object-fit:cover;border-radius:16px;" />
+            <div>
+              <h3 style="margin:0 0 6px;">OVERWATCH 2</h3>
+              <p class="muted" style="margin:0 0 12px;">Командные и индивидуальные услуги: быстрый и надежный буст.</p>
+              <a class="btn" href="./games/overwatch2.html">Выбрать</a>
+            </div>
+          </div>
+          <!-- social tags removed from card; socials shown in dedicated block below -->
+        </div>
+
+        <!-- Add additional placeholders to match layout density -->
+        <div class="glass" style="padding:18px;border-radius:20px;display:flex;align-items:center;justify-content:center;min-height:180px;">Доп. услуга</div>
+        <div class="glass" style="padding:18px;border-radius:20px;display:flex;align-items:center;justify-content:center;min-height:180px;">Доп. услуга</div>
+        <div class="glass" style="padding:18px;border-radius:20px;display:flex;align-items:center;justify-content:center;min-height:180px;">Доп. услуга</div>
+      </div>
+
+    </section>
+
+    <!-- Social networks block: moved out from under individual game cards -->
+    <section class="socials container" style="padding:28px 0;">
+      <div class="glass" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px;border-radius:18px;flex-wrap:wrap;">
+        <div style="min-width:240px;">
+          <h3 style="margin:0 0 6px;">Мы в соцсетях</h3>
+          <p class="muted" style="margin:0;">Подписывайтесь, чтобы не пропустить акции, новости и промо‑предложения.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;">
+          <a class="btn btn--ghost" href="#">YouTube</a>
+          <a class="btn btn--ghost" href="#">Twitch</a>
+          <a class="btn btn--ghost" href="#">VK</a>
+          <a class="btn btn--ghost" href="#">Telegram</a>
+          <a class="btn btn--ghost" href="#">Discord</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo container">
+      <div class="promo__inner glass">
+        <div class="promo__content">
+          <h3><span class="accent">ЗАРЕГИСТРИРУЙСЯ</span><br>И ПОЛУЧИ MIRCOIN’ОВ ×100</h3>
+          <p class="muted">У нас есть своя валюта “Mircoin”, которую можно получить за выполненные задания из личного кабинета, а потом оплатить ими 50% любой покупки.</p>
+          <a class="btn ripple" href="./pages/contacts.html">Забрать всё</a>
+        </div>
+        <div class="promo__card">
+          <div class="promo__badge">Новое</div>
+          <img class="promo__img" src="./cabinet/morflax-studio (2) 1.png" alt="morflax" />
+          <div class="promo__caption">×100</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="fcol">
+        <img src="./assets/logo.svg" class="f-logo" alt="MIRCLUB" />
+        <p class="muted small">Профессиональный буст рейтинга от PRO-геймеров.</p>
+      </div>
+      <div class="fcol"><h5>Политика</h5><a href="#">Правила и условия</a><a href="#">Соглашение</a><a href="#">Конфиденциальность</a><a href="#">Возврат</a></div>
+      <div class="fcol"><h5>Информация</h5><a href="#">FAQ</a><a href="#">Работа бустёров</a><a href="#">Оплата</a></div>
+      <div class="fcol"><h5>Оплата</h5><img src="./assets/payments.svg" alt="Payments"/></div>
+    </div>
+    <div class="container copy">© <span id="year"></span> MIRCLUB</div>
+  </footer>
+
+<script src="./app.js"></script>
+</body>
+</html>

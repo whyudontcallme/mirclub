@@ -21,17 +21,100 @@
     </nav>
     <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
   </header>
-  <nav class="mnav" id="mnav">
-    <a href="../index.html#services">Услуги</a>
-    <a href="../pages/about.html">О нас</a>
-    <a href="../pages/reviews.html">Отзывы</a>
-    <a href="../cabinet/index.html">Личный кабинет</a>
-    <div class="theme-toggle mt8" id="themeToggleM">
-      <button data-theme="light">Светлая</button>
-      <button data-theme="default" class="active">Обычная</button>
-      <button data-theme="dark">Тёмная</button>
-    </div>
-  </nav><section class="container" style="padding:40px 0"><h1 class="title" style="text-align:left">DOTA2</h1><div class="glass" style="padding:18px">Скоро тут будут пакеты услуг…</div></section>  <footer class="footer">
+    </nav>
+
+    <!-- Interactive Dota2 service block -->
+    <section class="container" style="padding:28px 0 48px;">
+      <h1 class="title" style="text-align:left">Услуги по Dota 2</h1>
+      <div class="glass" style="display:flex;gap:20px;padding:18px;border-radius:18px;align-items:flex-start;flex-wrap:wrap;">
+        <!-- Left: current rank / quick ranks -->
+        <div style="flex:1 1 220px;min-width:220px;max-width:320px;">
+          <h3 style="margin:6px 0 12px;">Текущий MMR</h3>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <img id="currentRankImg" src="../assets/avatars/New folder (2)/guardian_3.png" alt="current" style="width:84px;height:84px;object-fit:contain;border-radius:10px;" />
+            <div>
+              <div class="muted" style="font-size:13px;margin-bottom:6px;">Укажите текущий MMR</div>
+              <input id="currentMmr" type="number" value="2500" min="0" max="10000" style="width:120px;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:var(--text);" />
+            </div>
+          </div>
+
+          <h3 style="margin:18px 0 8px;">Быстрый выбор ранга</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <!-- a few representative rank icons for quick set -->
+            <button class="rank-btn" data-mmr="400" style="background:transparent;border:none;cursor:pointer;padding:6px;border-radius:8px;">
+              <img src="../assets/avatars/New folder (2)/herald_1.png" alt="herald" style="width:56px;height:56px;object-fit:contain;" />
+            </button>
+            <button class="rank-btn" data-mmr="1000" style="background:transparent;border:none;cursor:pointer;padding:6px;border-radius:8px;"><img src="../assets/avatars/New folder (2)/guardian_1.png" alt="guardian" style="width:56px;height:56px;object-fit:contain;" /></button>
+            <button class="rank-btn" data-mmr="2000" style="background:transparent;border:none;cursor:pointer;padding:6px;border-radius:8px;"><img src="../assets/avatars/New folder (2)/ancient_2.png" alt="ancient" style="width:56px;height:56px;object-fit:contain;" /></button>
+            <button class="rank-btn" data-mmr="3000" style="background:transparent;border:none;cursor:pointer;padding:6px;border-radius:8px;"><img src="../assets/avatars/New folder (2)/divine_2.png" alt="divine" style="width:56px;height:56px;object-fit:contain;" /></button>
+            <button class="rank-btn" data-mmr="4200" style="background:transparent;border:none;cursor:pointer;padding:6px;border-radius:8px;"><img src="../assets/avatars/New folder (2)/legend_3.png" alt="legend" style="width:56px;height:56px;object-fit:contain;" /></button>
+            <button class="rank-btn" data-mmr="6000" style="background:transparent;border:none;cursor:pointer;padding:6px;border-radius:8px;"><img src="../assets/avatars/New folder (2)/titan10.png" alt="titan" style="width:56px;height:56px;object-fit:contain;" /></button>
+          </div>
+        </div>
+
+        <!-- Center: MMR bar and options -->
+        <div style="flex:2 1 520px;min-width:300px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <div>
+              <div class="muted">Целевой MMR</div>
+              <div id="targetDisplay" style="font-size:28px;font-weight:700;color:#2CE7FF;margin-top:6px;">+ 3 800 MMR</div>
+            </div>
+            <div style="text-align:right;min-width:160px;">
+              <div class="muted">Предыдущий</div>
+              <div id="prevDisplay" style="font-weight:600;margin-top:6px;">2 500</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;">
+            <input id="targetMmr" type="range" min="0" max="8000" value="6300" style="width:100%;" />
+            <div style="height:10px;background:linear-gradient(90deg,#7b2cff,#00e7ff);border-radius:8px;margin-top:10px;position:relative;"></div>
+          </div>
+
+          <h4 style="margin:16px 0 8px;">Опции</h4>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <label style="display:flex;align-items:center;gap:8px;">
+              <input class="opt" type="checkbox" data-mult="0.5" /> Дуо игры <span class="muted" style="margin-left:6px;">(+50%)</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:8px;">
+              <input class="opt" type="checkbox" data-mult="0.25" /> Включить стрим <span class="muted" style="margin-left:6px;">(+25%)</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:8px;">
+              <input class="opt" type="checkbox" data-mult="0.5" /> Трофеи <40 lvl <span class="muted" style="margin-left:6px;">(+50%)</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:8px;">
+              <input class="opt" type="checkbox" data-mult="0.2" /> Нет жетонов <span class="muted" style="margin-left:6px;">(+20%)</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:8px;">
+              <input class="opt" type="checkbox" data-mult="0.3" /> На моих героях <span class="muted" style="margin-left:6px;">(+30%)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Right: price card -->
+        <div style="flex:0 0 260px;min-width:220px;">
+          <div style="background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0.06));padding:20px;border-radius:14px;text-align:center;">
+            <div class="muted">Примерная цена</div>
+            <div id="price" style="font-size:36px;font-weight:800;margin:12px 0;color:#ff44ff;">1 500,00 ₽</div>
+            <button id="orderBtn" class="btn" style="padding:10px 16px;border-radius:30px;background:#6a00ff;color:#fff;border:none;cursor:pointer;">Оформить заказ</button>
+            <div class="muted" style="font-size:12px;margin-top:8px;">Срок выполнения: от 1 дня</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- small ranks gallery kept below for reference -->
+    <section id="ranks" class="container" style="padding:8px 0 48px;">
+      <h3 class="title">Ранги (быстрый выбор)</h3>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <img src="../assets/avatars/New folder (2)/ancient_1.png" style="width:64px;height:64px;object-fit:contain;" />
+        <img src="../assets/avatars/New folder (2)/ancient_2.png" style="width:64px;height:64px;object-fit:contain;" />
+        <img src="../assets/avatars/New folder (2)/ancient_3.png" style="width:64px;height:64px;object-fit:contain;" />
+        <img src="../assets/avatars/New folder (2)/ancient_4.png" style="width:64px;height:64px;object-fit:contain;" />
+        <img src="../assets/avatars/New folder (2)/ancient_5.png" style="width:64px;height:64px;object-fit:contain;" />
+      </div>
+    </section>
+
+    <footer class="footer">
     <div class="container footer__inner">
       <div class="fcol">
         <img src="../assets/logo.svg" class="f-logo" alt="MIRCLUB" />
@@ -42,4 +125,48 @@
       <div class="fcol"><h5>Оплата</h5><img src="../assets/payments.svg" alt="Payments"/></div>
     </div>
     <div class="container copy">© <span id="year"></span> MIRCLUB</div>
-  </footer><script src="../app.js"></script><script src="../anim.js"></script></body></html>
+  </footer>
+  <script>
+  // Interactive logic for Dota2 service block
+  ;(function(){
+    var target = document.getElementById('targetMmr');
+    var targetDisplay = document.getElementById('targetDisplay');
+    var prevDisplay = document.getElementById('prevDisplay');
+    var priceEl = document.getElementById('price');
+    var currentMmr = document.getElementById('currentMmr');
+    var rankBtns = document.querySelectorAll('.rank-btn');
+    var opts = document.querySelectorAll('.opt');
+    var currentRankImg = document.getElementById('currentRankImg');
+
+    function formatPrice(v){
+      return v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ',00 \u20BD';
+    }
+
+    function calc(){
+      var base = 1500; // базовая цена
+      var prev = parseInt(currentMmr.value||0,10) || 0;
+      var tgt = parseInt(target.value||0,10) || 0;
+      var diff = Math.max(0, tgt - prev);
+      var price = base + Math.round((diff/1000) * 2000);
+      opts.forEach(function(ch){ if(ch.checked){ price = Math.round(price*(1+parseFloat(ch.dataset.mult||0))); } });
+      priceEl.textContent = formatPrice(price);
+      prevDisplay.textContent = prev.toLocaleString();
+      targetDisplay.textContent = (tgt - prev >=0 ? '+ ' : '') + (tgt - prev).toLocaleString() + ' MMR';
+    }
+
+    if(target) target.addEventListener('input', calc);
+    if(currentMmr) currentMmr.addEventListener('change', calc);
+    opts.forEach(function(ch){ ch.addEventListener('change', calc); });
+
+    rankBtns.forEach(function(b){ b.addEventListener('click', function(){
+      var mmr = parseInt(b.dataset.mmr,10)||0;
+      currentMmr.value = mmr;
+      var img = b.querySelector('img'); if(img && currentRankImg) currentRankImg.src = img.src;
+      calc();
+    }); });
+
+    // init
+    calc();
+  })();
+  </script>
+  <script src="../app.js"></script><script src="../anim.js"></script></body></html>

@@ -69,7 +69,8 @@ body[data-theme="dark"] .theme-toggle button.active{
 .glass{background:var(--glass);border:1px solid rgba(255,255,255,.06);border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.04);backdrop-filter:blur(8px)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:800;color:var(--btn-ink);background:linear-gradient(135deg,var(--btn),#7c3aed);box-shadow:0 12px 30px rgba(255,92,243,.35);border:0;cursor:pointer}
 .btn--sm{padding:10px 14px}.btn--lg{padding:14px 22px;font-size:18px}.btn--ghost{background:transparent;border:1px solid rgba(255,255,255,.18);color:var(--ink);box-shadow:none}
-.header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;position:sticky;top:0;background:linear-gradient(180deg,var(--bg),transparent);z-index:5}
+.header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;background:linear-gradient(180deg,var(--bg),transparent);z-index:5}
+.header--glass{background:linear-gradient(90deg,rgba(0,0,0,.45),rgba(10,10,15,.25));backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.03)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800;font-size:18px}
 .brand img{height:28px}.brand .boost{opacity:.8}
 
@@ -79,7 +80,10 @@ body[data-theme="dark"] .theme-toggle button.active{
 .mnav{display:none;position:fixed;inset:64px 16px auto 16px;padding:16px;gap:10px;flex-direction:column;z-index:50}.mnav.open{display:flex}
 
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:40px 0 16px}
+.hero--large{padding-top:56px;padding-bottom:24px}
 .hero h1{font-size:52px;line-height:1.05;margin:0 0 14px;font-weight:800;letter-spacing:.3px}
+.hero__right{display:flex;align-items:center;justify-content:center}
+.hero__img{max-width:100%;height:auto;filter:drop-shadow(0 30px 80px rgba(141,92,246,.35));transform:translateX(6%);max-height:520px}
 .accent{background:linear-gradient(90deg,var(--accent2),var(--accent1));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero__cta{display:flex;gap:12px;margin:14px 0 8px}
 .hero__right{text-align:center}.hero__img{max-width:100%;height:auto;filter:drop-shadow(0 30px 80px rgba(141,92,246,.35))}
@@ -88,9 +92,10 @@ body[data-theme="dark"] .theme-toggle button.active{
 .banner-ticker{position:relative;overflow:hidden;height:140px;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%)}
 .ticker-track{display:flex;align-items:center;gap:22px;height:100%;padding:18px 0;animation:banner-scroll 28s linear infinite}
 .banner-ticker:hover .ticker-track{animation-play-state:paused}
-.tile{flex:0 0 auto;display:flex;align-items:center;gap:14px;height:100px;min-width:320px;padding:0 18px;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);text-decoration:none;color:#fff;box-shadow:0 18px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.05);transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
-.tile:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.25);box-shadow:0 24px 50px rgba(139,92,246,.28)}
-.tile img{height:32px}.tile span{font-weight:800;white-space:nowrap;opacity:.95}
+.tile{flex:0 0 auto;display:flex;align-items:center;gap:14px;height:100px;min-width:320px;padding:0 18px;border-radius:20px;background:var(--surface);border:1px solid rgba(255,255,255,.04);text-decoration:none;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.4);transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+.tile:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.12);box-shadow:0 22px 40px rgba(139,92,246,.18)}
+.tile img{height:28px;opacity:.95;filter:grayscale(.05) contrast(1.05)}
+.tile span{font-weight:800;white-space:nowrap;opacity:.95}
 @keyframes banner-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .btn {
   background: var(--btn-bg);
@@ -120,7 +125,84 @@ body[data-theme="dark"] .theme-toggle button.active{
 .track::-webkit-scrollbar{display:none}
 
 /* Promo */
-.promo{padding:30px 0 60px}.promo__inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px}.promo__img{width:140px;height:140px;object-fit:contain}
+.services{padding:72px 0 36px}
+.services .title{margin-bottom:18px}
+.services .slider{padding-bottom:6px}
+.promo{padding:48px 0 80px;margin-top:28px}
+
+/* ====== Unified vertical spacing for main page blocks ====== */
+:root{
+  --section-vertical:72px; /* default spacing between sections */
+}
+
+/* Apply consistent vertical padding to the main content sections */
+.hero,
+.banner-ticker,
+.why-mirclub,
+.services,
+.promo,
+.reviews{
+  padding-top: var(--section-vertical) !important;
+  padding-bottom: var(--section-vertical) !important;
+}
+
+/* Small adjustments inside services so the slider doesn't touch the edges */
+.services .slider{padding-top:8px;padding-bottom:8px}
+
+/* Responsive: reduce spacing on smaller viewports */
+@media (max-width:1024px){
+  :root{ --section-vertical:48px }
+}
+@media (max-width:640px){
+  :root{ --section-vertical:28px }
+}
+.promo__inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:28px;border-radius:22px}
+.promo__content{max-width:980px}
+.promo__content h3{font-size:36px;margin:0 0 10px}
+.promo__content .muted{max-width:720px}
+.promo__card{position:relative;width:220px;height:220px;border-radius:20px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.06);box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.promo__badge{position:absolute;top:-12px;right:12px;background:linear-gradient(90deg,var(--accent1),#ff2bd1);color:#fff;padding:6px 12px;border-radius:12px;font-weight:800;font-size:13px;box-shadow:0 8px 20px rgba(139,92,246,.18)}
+.promo__img{width:160px;height:160px;object-fit:contain}
+.promo__caption{position:absolute;bottom:0;left:0;right:0;text-align:center;background:rgba(255,255,255,.95);color:var(--accent1);font-weight:900;padding:10px 0;border-bottom-left-radius:20px;border-bottom-right-radius:20px}
+
+/* ===== Header & Hero tweaks to match the screenshot ===== */
+/* Center the main nav, keep brand pinned left and make the login button a white pill */
+.header{
+  /* center content so nav sits in the middle */
+  display:flex;align-items:center;justify-content:center;padding:22px 0;height:var(--header-height);z-index:6
+}
+.header .brand{position:absolute;left:var(--edge);z-index:8;top:50%;transform:translateY(-50%);}
+.header .nav{display:flex;gap:34px;align-items:center}
+.header .nav a{font-weight:700;padding:8px 6px;opacity:.95}
+.header .btn--ghost{
+  /* white pill like on the reference */
+  background:#ffffff;color:var(--accent1);border:0;padding:8px 18px;border-radius:28px;box-shadow:0 6px 20px rgba(139,92,246,.12);font-weight:800;
+  position:absolute;right:var(--edge);top:50%;transform:translateY(-50%);z-index:9;
+}
+.header--glass{background:linear-gradient(90deg,rgba(0,0,0,.45),rgba(10,10,15,.25));backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.03)}
+
+/* Make hero artwork larger, allow it to overflow to the right so the character isn't clipped */
+.hero{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:end;padding-top:80px;padding-bottom:8px;overflow:visible}
+.hero--large{padding-top:64px}
+.hero__right{overflow:visible;position:relative}
+.hero__img{
+  /* allow the image to grow beyond the container and push visually to the right */
+  max-width:none;max-height:calc(100vh - 140px);height:auto;width:auto;transform:translateX(12%) scale(1.15);filter:drop-shadow(0 40px 100px rgba(141,92,246,.38));object-fit:contain
+}
+
+/* Responsive fallbacks: smaller screens keep the previous safe sizes and layout */
+@media (max-width:1024px){
+  .header{justify-content:space-between;height:auto;padding:18px 0}
+  .header .brand{position:relative;left:auto}
+  .header .nav{gap:18px}
+  .header .btn--ghost{padding:8px 14px;border-radius:20px;background:transparent;color:var(--ink);border:1px solid var(--border);box-shadow:none}
+  .hero{grid-template-columns:1fr;align-items:center;padding-top:40px}
+  .hero__img{transform:none;scale:1;max-height:520px}
+}
+@media (max-width:640px){
+  .hero h1{font-size:34px}
+  .hero__img{max-height:380px}
+}
 
 /* Footer */
 .footer{border-top:1px solid rgba(255,255,255,.08);padding:30px 0 20px;background:radial-gradient(900px 400px at 50% 0%,rgba(139,92,246,.15),transparent 60%)}
@@ -129,6 +211,15 @@ body[data-theme="dark"] .theme-toggle button.active{
 /* Responsive */
 @media (max-width:1024px){.hero{grid-template-columns:1fr}.track{grid-auto-columns:calc(50% - 6px)}.footer__inner{grid-template-columns:1fr 1fr}.nav{display:none}.burger{display:block}.banner-ticker{height:120px}.tile{min-width:270px;height:88px}}
 @media (max-width:640px){.hero h1{font-size:34px}.track{grid-auto-columns:100%}.footer__inner{grid-template-columns:1fr}.banner-ticker{height:110px}.tile{min-width:240px;height:82px}}
+
+@media (max-width:1024px){
+  .services{padding:48px 0 28px}
+  .promo{padding:36px 0 48px;margin-top:18px}
+}
+@media (max-width:640px){
+  .services{padding:36px 0 18px}
+  .promo{padding:28px 0 36px;margin-top:12px}
+}
 
 /* Фон/текст страницы */
 body{ background: var(--bg); color: var(--ink); }
@@ -268,6 +359,70 @@ body{margin:0; background:var(--bg); color:var(--ink); font-family:Manrope,syste
 .center{text-align:center}
 .small{font-size:14px}
 
+/* ======================================================================================
+   Fixed header: ensure header stays visible on scroll and doesn't get covered by content
+   - sets a consistent header height and top fix
+   - adds body padding so page content doesn't hide under the fixed header
+   - adjusts mobile insets for the mobile nav (.mnav)
+====================================================================================== */
+
+:root{ --header-height: 92px; }
+
+.header{
+  position: fixed !important;
+  top: 0 !important; left: 0 !important; right: 0 !important;
+  width: 100% !important;
+  height: var(--header-height) !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  z-index: 9999 !important;
+  background: linear-gradient(90deg, rgba(0,0,0,.45), rgba(10,10,15,.25)) !important;
+  backdrop-filter: blur(8px) !important;
+  border-bottom: 1px solid rgba(255,255,255,.03) !important;
+}
+
+/* When header has the .container class in the HTML it inherits the container's max-width/padding
+   which prevents a full-bleed fixed header. Make the header full-width while keeping inner
+   spacing via the existing --edge variable. */
+.header.container{
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.header .nav{
+  /* ensure nav stays centered in the viewport */
+  margin: 0 auto;
+}
+
+/* language selector near right side of header */
+.lang{
+  display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:14px;background:transparent;color:var(--ink);font-weight:800;opacity:.95;border:1px solid transparent
+}
+.lang .caret{opacity:.65;margin-left:6px;font-size:12px}
+.header .lang{position:absolute;right:120px;top:50%;transform:translateY(-50%);z-index:10011}
+
+/* make sure brand and call-to-action stay positioned relative to the fixed header */
+.header .brand{ position:absolute; left:var(--edge); top:50%; transform:translateY(-50%); z-index:10010; }
+.header .btn--ghost{ position:absolute; right:var(--edge); top:50%; transform:translateY(-50%); z-index:10010; }
+
+/* push page content down so it doesn't sit under the fixed header */
+body{ padding-top: calc(var(--header-height)); }
+
+/* mobile adjustments: smaller header padding on narrow screens */
+@media (max-width:1024px){
+  :root{ --header-height: 72px; }
+  body{ padding-top: var(--header-height); }
+  .mnav{ inset: var(--header-height) 16px auto 16px; }
+}
+@media (max-width:640px){
+  :root{ --header-height: 64px; }
+  body{ padding-top: var(--header-height); }
+  .mnav{ inset: var(--header-height) 12px auto 12px; }
+}
+
+
 /* декоративные fx-градиенты (для обычной/светлой) */
 .bg{position:fixed;inset:0;pointer-events:none;z-index:-1;mix-blend-mode:screen;opacity:.5}
 .fx-1{background:radial-gradient(600px 300px at 20% 15%,rgba(139,92,246,.35),transparent 70%)}
@@ -278,7 +433,7 @@ body{margin:0; background:var(--bg); color:var(--ink); font-family:Manrope,syste
 
 /* ==== ШАПКА ======================================================== */
 
-.header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;position:sticky;top:0;background:linear-gradient(180deg,var(--bg),transparent);z-index:5}
+.header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;background:linear-gradient(180deg,var(--bg),transparent);}
 [data-theme="dark"] .header{background:#000!important}
 
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800;font-size:18px}
@@ -376,8 +531,14 @@ body{margin:0; background:var(--bg); color:var(--ink); font-family:Manrope,syste
 /* ==== ПРОМО ======================================================== */
 
 .promo{padding:30px 0 60px}
-.promo__inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px}
-.promo__img{width:140px;height:140px;object-fit:contain}
+.promo__inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:28px;border-radius:22px}
+.promo__content{max-width:980px}
+.promo__content h3{font-size:36px;margin:0 0 10px}
+.promo__content .muted{max-width:720px}
+.promo__card{position:relative;width:220px;height:220px;border-radius:20px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.06);box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.promo__badge{position:absolute;top:-12px;right:12px;background:linear-gradient(90deg,var(--accent1),#ff2bd1);color:#fff;padding:6px 12px;border-radius:12px;font-weight:800;font-size:13px;box-shadow:0 8px 20px rgba(139,92,246,.18)}
+.promo__img{width:160px;height:160px;object-fit:contain}
+.promo__caption{position:absolute;bottom:0;left:0;right:0;text-align:center;background:rgba(255,255,255,.95);color:var(--accent1);font-weight:900;padding:10px 0;border-bottom-left-radius:20px;border-bottom-right-radius:20px}
 
 /* ==== ФУТЕР ======================================================== */
 
